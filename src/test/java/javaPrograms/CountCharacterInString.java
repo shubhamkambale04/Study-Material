@@ -2,19 +2,32 @@ package javaPrograms;
 
 public class CountCharacterInString {
 
-    public static void main(String[] args) {
-        String s = "Hello World"; 
-        int count = 0;
-        
-        for (int i = 0; i < s.length(); i++) 
-        {
-        	char ch=Character.toLowerCase(s.charAt(i));
-            if (ch != ' ') 
-            { 
-                count++;
-            }       
+	public static int count;
+
+	public static void main(String[] args) {
+		String s = "Hello World";
+
+		// Approach 1
+		System.out.println(s.length());
+		s = s.replace(" ", "");
+		System.out.println(s.length());
+
+		// Approach 2
+		count = 0;
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) != ' ') {
+				count++;
+			}
 		}
-        //Displays the total number of characters present in the given string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
-        System.out.println("Number of characters (excluding spaces): " + count);
+		System.out.println("Number of characters (excluding spaces): " + count);
+
+		// Approach 3
+		count = 0;
+		for (char ch : s.toCharArray()) {
+			if (ch != ' ') {
+				count++;
+			}
+		}
+		System.out.println("Number of characters (excluding spaces): " + count);
 	}
 }

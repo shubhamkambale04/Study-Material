@@ -3,13 +3,19 @@ package javaPrograms;
 public class CountDigitsInNumber {
 
 	public static void main(String[] args) {
-		int i=42342467;
-		int count = 0;
+		int n = 42342467;
 
-		while (i != 0) {
-            i = i / 10; // Remove the last digit
-            count++; // Increment the count for each digit
+		// Approach 1
+		String s = Integer.toString(n);
+		System.out.println(s.length());
+		
+		// Approach 2
+		int count = 0;
+		while (n != 0) {
+			n = n / 10; // Remove the last digit
+			count++; // Increment the count for each digit
 		}
 		System.out.println(count);
+
 	}
 }

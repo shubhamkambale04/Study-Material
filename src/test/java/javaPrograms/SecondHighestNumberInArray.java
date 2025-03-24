@@ -10,7 +10,7 @@ public class SecondHighestNumberInArray {
 
 		int firstMax = Integer.MIN_VALUE;
 		int secondMax = Integer.MAX_VALUE;
-/*
+		/*
 		for (int i = 0; i < numbers.length; i++) {
 			if (numbers[i] > firstMax) {
 				secondMax = firstMax;
@@ -21,21 +21,20 @@ public class SecondHighestNumberInArray {
 		}
 		System.out.println("Second highest number is: " + secondMax);
 		*/
-		for (int i:numbers) {
-			if (i > firstMax) {
+		for (int num:numbers) {
+			if (num > firstMax) {
 				secondMax = firstMax;
-				firstMax = i;
-			} else if (i > secondMax) {
-				secondMax = i;
+				firstMax = num;
+			} else if (num > secondMax) {
+				secondMax = num;
 			}
 		}
 		System.out.println("Second highest number is: " + secondMax);
 		
-
 		// solution 2
 		Arrays.sort(numbers, Collections.reverseOrder()); // Sort in descending order
-
 		System.out.println("Second highest number is: " + numbers[1]);
+		
 		// solution 3
 		Arrays.sort(numbers); // sort in ascending order
 		int second = numbers[numbers.length - 2];

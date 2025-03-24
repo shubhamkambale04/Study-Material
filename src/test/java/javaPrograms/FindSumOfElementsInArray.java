@@ -6,7 +6,6 @@ public class FindSumOfElementsInArray {
 		int a[] = { 1, 2, 3, 4, 5 }; // Given array
 		int sum = 0;
 
-		// Loop to calculate sum
 		for (int num : a) {
 			sum = sum + num;
 		}

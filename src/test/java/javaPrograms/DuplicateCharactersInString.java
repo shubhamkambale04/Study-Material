@@ -2,7 +2,7 @@ package javaPrograms;
 
 import java.util.HashSet;
 
-public class DuplicateCharacters {
+public class DuplicateCharactersInString {
 	public static void main(String[] args) {
 		String s = "shubham kambale";
 		s = s.replaceAll(" ", ""); // Remove spaces
@@ -11,11 +11,13 @@ public class DuplicateCharacters {
 		HashSet<Character> duplicates = new HashSet<>();
 
 		for (char ch : s.toCharArray()) {
-			if (!unique.add(ch)) {
+			if (unique.contains(ch)) {
 				duplicates.add(ch);
+			} else {
+				unique.add(ch);
 			}
 		}
-
 		System.out.println("Duplicate characters: " + duplicates);
+		System.out.println("Duplicate characters: " + unique);
 	}
 }

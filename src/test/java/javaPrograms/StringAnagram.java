@@ -19,8 +19,8 @@ public class StringAnagram {
 	}
 
 	public static void main(String[] args) {
-		String s1 = "listen";
-		String s2 = "silent";
+		String s1 = "avajava";
+		String s2 = "javaava";
 
 		if (isAnagram(s1, s2)) {
 			System.out.println("Strings are anagrams");

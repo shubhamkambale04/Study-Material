@@ -8,7 +8,7 @@ public class ZReverseWords {
 
 	public static void main(String[] args) {
 		String s = "shubham suryakant kambale";
-	
+
 		// Convert string to list
 		List<String> wordsList = Arrays.asList(s.split(" "));
 
@@ -25,9 +25,9 @@ public class ZReverseWords {
 		// Collections.swap(wordsList, 1, 2);
 		System.out.println("1,2: " + String.join(" ", wordsList));
 
-		//Collections.rotate(wordsList, -1);
+		// Collections.rotate(wordsList, -1);
 		System.out.println("-1: " + String.join(" ", wordsList));
-		
+
 		Collections.rotate(wordsList, -2);
 		System.out.println("-2: " + String.join(" ", wordsList));
 	}

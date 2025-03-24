@@ -5,12 +5,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class DuplicateAndUniqueNumbersInArray {
+public class DuplicateAndUniqueNumbersInArrays {
 
 	public static void main(String[] args) {
-		int arr1[] = { 1, 3, 5, 2, 7,7 };
-		int arr2[] = { 2, 4, 5, 8, 1 };
+		int arr1[] = { 1, 3, 5, 2, 7, 3, 5 };
+		int arr2[] = { 2, 4, 5, 8, 1, 2, 1 };
 
+		// Approach 1 using set collection
 		Set<Integer> duplicates1 = new HashSet<>();
 		Set<Integer> uniqueNumbers1 = new HashSet<>();
 
@@ -25,16 +26,10 @@ public class DuplicateAndUniqueNumbersInArray {
 				uniqueNumbers1.add(num);
 			}
 		}
-
-		// Print duplicate numbers
 		System.out.println("Duplicate numbers: " + duplicates1);
-
-		// Print unique numbers
 		System.out.println("Unique numbers: " + uniqueNumbers1);
 
-		
-		
-		
+		// Approach 2 using list collection
 		List<Integer> duplicates = new ArrayList<>();
 		List<Integer> uniqueNumbers = new ArrayList<>();
 
@@ -51,11 +46,7 @@ public class DuplicateAndUniqueNumbersInArray {
 				duplicates.add(num);
 			}
 		}
-
-		// Print duplicate numbers
 		System.out.println("Duplicate numbers: " + duplicates);
-
-		// Print unique numbers
 		System.out.println("Unique numbers: " + uniqueNumbers);
 	}
 }
